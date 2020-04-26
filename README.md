@@ -2,7 +2,7 @@
 
 Esto es una primera versión de la api.
 
-Endpoint para obtener el contenido hacer una llamada GET a http://localhost:8080/contents
+Endpoint para obtener el contenido: GET a http://localhost:8080/contents
 
 Este endpoint devuelve una lista de objetos con la siguiente forma:
 {
