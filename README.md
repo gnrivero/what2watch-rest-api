@@ -16,4 +16,4 @@ Este endpoint devuelve una lista de objetos con la siguiente forma:
         "cover_url": "https://m.media-amazon.com/images/M/MV5BMDJiNzUwYzEtNmQ2Yy00NWE4LWEwNzctM2M0MjE0OGUxZTA3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg"
     }
 
-Por el momemnto devuelve 3 peliculas con fines de prueba.
+Por el momento devuelve 3 peliculas con fines de prueba.
