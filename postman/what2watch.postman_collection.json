@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "190feec9-ad67-49bd-96af-f48d0cc17af2",
+		"name": "what2watch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/contents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/contents?search=type:movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contents"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "type:movie"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-content",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Breaking Bad\",\n    \"description\": \"A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.\",\n    \"main_cast\": \"Bryan Cranston, Aaron Paul\",\n    \"director\": \"Vince Gillian\",\n    \"year\": \"2019\",\n    \"type\": \"series\",\n    \"genre\": \"action\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,718,1000_AL_.jpg\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/contents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contents"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
