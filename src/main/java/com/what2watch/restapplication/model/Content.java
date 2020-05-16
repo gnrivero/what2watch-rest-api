@@ -1,7 +1,16 @@
 package com.what2watch.restapplication.model;
 
+import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Entity
 public class Content {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String title;
     private String description;
     private String mainCast;
@@ -10,6 +19,14 @@ public class Content {
     private String type;
     private String genre;
     private String coverURL;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -74,4 +91,5 @@ public class Content {
     public void setCoverURL(String coverURL) {
         this.coverURL = coverURL;
     }
+
 }
