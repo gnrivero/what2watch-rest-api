@@ -1,19 +1,39 @@
 # what2watch-rest-api
 
-Esto es una primera versión de la api.
+<h1>Configuración del proyecto y consideraciones</h1>
 
-Endpoint para obtener el contenido: GET a http://localhost:8080/contents
+<h3>Setear el Spring Profile 'H2' como activo</h3>
 
-Este endpoint devuelve una lista de objetos con la siguiente forma:
-{
-        "title": "Extraction",
-        "description": "A movie about a rescue",
-        "main_cast": "Chris Hemsworth",
-        "director": "Joe Russo",
-        "year": "2020",
-        "type": "movie",
-        "genre": "drama, action",
-        "cover_url": "https://m.media-amazon.com/images/M/MV5BMDJiNzUwYzEtNmQ2Yy00NWE4LWEwNzctM2M0MjE0OGUxZTA3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg"
-    }
+Para esto en la opción 'program arguments' agregar la línea: --spring.profiles.active=h2
 
-Por el momento devuelve 3 peliculas con fines de prueba.
+Esto permite utilizar la base de datos H2 embebida (en lugar de la MySQL) que vamos a usar <b>para la primera versión</b>.
+Es una base de datos local que corre en memoria, la vamos a usar provisoriamente para las primeras pruebas de filtros.
+
+<h3>Para correr la aplicación</h3>
+
+Ejecutar la clase Application.java como Java Application (eclipse).
+
+<h3>¿Cómo llenar la base?</h3>
+
+<b>Opción 1: Con H2 Console</b>
+
+Ir a http://localhost:8080/h2-console y ejecutar las queries que están en el directorio SQL/Scripts/gonza/. 
+User: sa
+Password: password
+
+<b>Opción 2: Con el endpoint de creación</b>
+
+Usar el modelo de pegada que dejé en "postman/what2watch.postman_collection.json" para crear contenido con el metodo POST.
+
+<h3>Lo nuevo</h3>
+
+<b>Filtros</b>
+
+Se agregan los filtros de type y genre (entre otros).
+También se puede encontrar en el archivo json de postman un ejemplo de las nuevas pegadas con filtro.
+
+Algunos Ejemplos:
+
+GET http://localhost:8080/contents?search=type:series<br>
+GET http://localhost:8080/contents?search=type:movie<br>
+GET http://localhost:8080/contents?search=type:movie,genre:action<br>
