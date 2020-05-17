@@ -37,3 +37,5 @@ Algunos Ejemplos:
 GET http://localhost:8080/contents?search=type:series<br>
 GET http://localhost:8080/contents?search=type:movie<br>
 GET http://localhost:8080/contents?search=type:movie,genre:action<br>
+
+Doc: https://www.baeldung.com/rest-api-search-language-spring-data-specifications
