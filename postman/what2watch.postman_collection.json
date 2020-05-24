@@ -6,522 +6,610 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/contents",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/contents?search=type:series,genre:drama",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					],
-					"query": [
-						{
-							"key": "search",
-							"value": "type:series,genre:drama"
+			"name": "content",
+			"item": [
+				{
+					"name": "http://localhost:8080/contents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/contents?search=type:series,genre:drama",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "type:series,genre:drama"
+								}
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "create-content - series - action",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Breaking Bad\",\n    \"description\": \"A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.\",\n    \"main_cast\": \"Bryan Cranston, Aaron Paul\",\n    \"director\": \"Vince Gillian\",\n    \"year\": \"2019\",\n    \"type\": \"series\",\n    \"genre\": \"action\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,718,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content - series - drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Anne With an E\",\n    \"description\": \"The story of Anne Shirley, an imaginative, strong-willed orphan who transforms the lives of those she encounters after being sent to live with elderly siblings on Prince Edward Island in 1890.\",\n    \"main_cast\": \"AmyBeth McNulty, Dalila Bela, Geraldine James\",\n    \"director\": \"John Smith\",\n    \"year\": \"2017-2019\",\n    \"type\": \"series\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BNThmMzJlNzgtYmY5ZC00MDllLThmZTMtNTRiMjQwNmY0NmRhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_SX800_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content - series - drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Feel Good\",\n    \"description\": \"A comedian living in London navigates sobriety and a new relationship with her girlfriend.\",\n    \"main_cast\": \"Johan Ray\",\n    \"director\": \"Mae Martin\",\n    \"year\": \"2020\",\n    \"type\": \"series\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BZjc0NGY5NzQtZWU5YS00NzY5LTk2YzMtMmYwZmYzNTAwNTZjXkEyXkFqcGdeQXVyNzUxNzY1NjM@._V1_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content - series - drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Feel Good\",\n    \"description\": \"Set in the late 1970s, two FBI agents are tasked with interviewing serial killers to solve open cases.\",\n    \"main_cast\": \"Johnny Groff\",\n    \"director\": \"David Fincher\",\n    \"year\": \"2020\",\n    \"type\": \"series\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BNWNmYzQ1ZWUtYTQ3ZS00Y2UwLTlkMDctZThlOTJkMGJiNzBiXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SY1000_CR0,0,675,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content - series - drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Giri/Haji\",\n    \"description\": \"A detective from Tokyo travels to London in search of his missing brother, who had ties to the Yakuza.\",\n    \"main_cast\": \"Charlie Creed-Miles\",\n    \"director\": \"Chris Fry\",\n    \"year\": \"2020\",\n    \"type\": \"series\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BOTgxODE5YjMtMjE2OC00YTU5LWFmNTgtZTc5ZjRkNGM4ZGJmXkEyXkFqcGdeQXVyNjQ0MDQxOTM@._V1_SY1000_CR0,0,666,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content - series - comedy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Derek\",\n    \"description\": \"Ricky Gervais, creator of the original British version of The Office, produces and stars in this heartwarming comedy-drama as Derek Noakes, a loyal English nursing home caretaker who sees only the good in everyone\",\n    \"main_cast\": \"Ricky Gervais\",\n    \"director\": \"John Smith\",\n    \"year\": \"2013\",\n    \"type\": \"series\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMTQ2NzA0ODIzMl5BMl5BanBnXkFtZTgwMDg5NzMxMDE@._V1_SY1000_CR0,0,675,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content - series - comedy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Mystery science theater 3000: the return\",\n    \"description\": \"In this reboot of the cult classic, a human and two robots poke fun at cheesy sci-fi movies.\",\n    \"main_cast\": \"Johan Ray\",\n    \"director\": \"Aziz Ansari\",\n    \"year\": \"2017-2018\",\n    \"type\": \"series\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BZjc0NGY5NzQtZWU5YS00NzY5LTk2YzMtMmYwZmYzNTAwNTZjXkEyXkFqcGdeQXVyNzUxNzY1NjM@._V1_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content - series - comedy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Master of None\",\n    \"description\": \"Comedy following the personal and professional challenges that face a 30-year-old New York actor, whose trials range from the immigrant experience to what pasta he should eat for dinner.\",\n    \"main_cast\": \"Ricky Gervais\",\n    \"director\": \"Aziz Ansari\",\n    \"year\": \"2015\",\n    \"type\": \"series\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMTk3ODYxNjQ3OV5BMl5BanBnXkFtZTgwNzA1MDQ5MTI@._V1_SY1000_CR0,0,674,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  series -  comedy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Crazhead\",\n    \"description\": \"Black comedy about an unlikely duo of demon hunters.\",\n    \"main_cast\": \"Jane Doe\",\n    \"director\": \"Mike Thorgan\",\n    \"year\": \"2016\",\n    \"type\": \"series\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BOTgxODE5YjMtMjE2OC00YTU5LWFmNTgtZTc5ZjRkNGM4ZGJmXkEyXkFqcGdeQXVyNjQ0MDQxOTM@._V1_SY1000_CR0,0,666,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  movie -  drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"1917\",\n    \"description\": \"April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.\",\n    \"main_cast\": \"Dean-Charles Chapman\",\n    \"director\": \"Sam Mendes\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_SY1000_CR0,0,631,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  movie -  drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Parasite\",\n    \"description\": \"A corean family infiltrates in the house of a rich family and slowly gain control of each member\",\n    \"main_cast\": \"Song Go Han, Hi Sung Park\",\n    \"director\": \"Sam Mendes\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SY1000_CR0,0,674,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  movie -  drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Joker\",\n    \"description\": \"A delusional man becomes Gotham's most famous villain.\",\n    \"main_cast\": \"Joaquin Phoenix\",\n    \"director\": \"Todd Phillips\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,674,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  movie -  drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Extraction\",\n    \"description\": \"Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord.\",\n    \"main_cast\": \"Chris Hemsworth\",\n    \"director\": \"Sam Hargrave\",\n    \"year\": \"2020\",\n    \"type\": \"movie\",\n    \"genre\": \"drama, action\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMDJiNzUwYzEtNmQ2Yy00NWE4LWEwNzctM2M0MjE0OGUxZTA3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  movie -  comedy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Knives Out\",\n    \"description\": \"Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord.\",\n    \"main_cast\": \"Daniel Craig, Chris Evans, Ana de Armas \",\n    \"director\": \"Rian Johnson\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SY1000_SX675_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  movie -  comedy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"The Gentlemen\",\n    \"description\": \"An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.\",\n    \"main_cast\": \" Matthew McConaughey, Charlie Hunnam, Michelle Dockery.\",\n    \"director\": \"Guy Ritchie\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"comedy, action\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMTlkMmVmYjktYTc2NC00ZGZjLWEyOWUtMjc2MDMwMjQwOTA5XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_SY1000_SX675_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  movie -  comedy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Jojo Rabbit\",\n    \"description\": \"A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.\",\n    \"main_cast\": \"Roman Griffin Davis, Thomasin McKenzie, Scarlett Johansson\",\n    \"director\": \"Taika Waititi\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SY1000_SX675_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-content -  movie -  comedy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Once Upon a Time... in Hollywood\",\n    \"description\": \"A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.\",\n    \"main_cast\": \"Daniel Craig, Chris Evans, Ana de Armas \",\n    \"director\": \"Quentin Tarantino\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"comedy, drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SY1000_CR0,0,674,1000_AL_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "create-content - series - action",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Breaking Bad\",\n    \"description\": \"A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.\",\n    \"main_cast\": \"Bryan Cranston, Aaron Paul\",\n    \"director\": \"Vince Gillian\",\n    \"year\": \"2019\",\n    \"type\": \"series\",\n    \"genre\": \"action\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,718,1000_AL_.jpg\"\n}"
+			"name": "user",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Juan\",\n\t\"surname\" : \"Perez\",\n\t\"username\" : \"jperez89\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"jperez@gmail.com\",\n\t\"birth_date\" : \"1989-06-01\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content - series - drama",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Anne With an E\",\n    \"description\": \"The story of Anne Shirley, an imaginative, strong-willed orphan who transforms the lives of those she encounters after being sent to live with elderly siblings on Prince Edward Island in 1890.\",\n    \"main_cast\": \"AmyBeth McNulty, Dalila Bela, Geraldine James\",\n    \"director\": \"John Smith\",\n    \"year\": \"2017-2019\",\n    \"type\": \"series\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BNThmMzJlNzgtYmY5ZC00MDllLThmZTMtNTRiMjQwNmY0NmRhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_SX800_AL_.jpg\"\n}"
+				{
+					"name": "search user by username and password",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users?search=username:jperez89,pass:123456",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "username:jperez89,pass:123456"
+								}
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
+				{
+					"name": "search user - non-existent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users?search=username:jperez89,pass:1234",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "username:jperez89,pass:1234"
+								}
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content - series - drama",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Feel Good\",\n    \"description\": \"A comedian living in London navigates sobriety and a new relationship with her girlfriend.\",\n    \"main_cast\": \"Johan Ray\",\n    \"director\": \"Mae Martin\",\n    \"year\": \"2020\",\n    \"type\": \"series\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BZjc0NGY5NzQtZWU5YS00NzY5LTk2YzMtMmYwZmYzNTAwNTZjXkEyXkFqcGdeQXVyNzUxNzY1NjM@._V1_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content - series - drama",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Feel Good\",\n    \"description\": \"Set in the late 1970s, two FBI agents are tasked with interviewing serial killers to solve open cases.\",\n    \"main_cast\": \"Johnny Groff\",\n    \"director\": \"David Fincher\",\n    \"year\": \"2020\",\n    \"type\": \"series\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BNWNmYzQ1ZWUtYTQ3ZS00Y2UwLTlkMDctZThlOTJkMGJiNzBiXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SY1000_CR0,0,675,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content - series - drama",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Giri/Haji\",\n    \"description\": \"A detective from Tokyo travels to London in search of his missing brother, who had ties to the Yakuza.\",\n    \"main_cast\": \"Charlie Creed-Miles\",\n    \"director\": \"Chris Fry\",\n    \"year\": \"2020\",\n    \"type\": \"series\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BOTgxODE5YjMtMjE2OC00YTU5LWFmNTgtZTc5ZjRkNGM4ZGJmXkEyXkFqcGdeQXVyNjQ0MDQxOTM@._V1_SY1000_CR0,0,666,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content - series - comedy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Derek\",\n    \"description\": \"Ricky Gervais, creator of the original British version of The Office, produces and stars in this heartwarming comedy-drama as Derek Noakes, a loyal English nursing home caretaker who sees only the good in everyone\",\n    \"main_cast\": \"Ricky Gervais\",\n    \"director\": \"John Smith\",\n    \"year\": \"2013\",\n    \"type\": \"series\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMTQ2NzA0ODIzMl5BMl5BanBnXkFtZTgwMDg5NzMxMDE@._V1_SY1000_CR0,0,675,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content - series - comedy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Master of None\",\n    \"description\": \"Comedy following the personal and professional challenges that face a 30-year-old New York actor, whose trials range from the immigrant experience to what pasta he should eat for dinner.\",\n    \"main_cast\": \"Ricky Gervais\",\n    \"director\": \"Aziz Ansari\",\n    \"year\": \"2015\",\n    \"type\": \"series\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMTk3ODYxNjQ3OV5BMl5BanBnXkFtZTgwNzA1MDQ5MTI@._V1_SY1000_CR0,0,674,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content - series - comedy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Mystery science theater 3000: the return\",\n    \"description\": \"In this reboot of the cult classic, a human and two robots poke fun at cheesy sci-fi movies.\",\n    \"main_cast\": \"Johan Ray\",\n    \"director\": \"Aziz Ansari\",\n    \"year\": \"2017-2018\",\n    \"type\": \"series\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BZjc0NGY5NzQtZWU5YS00NzY5LTk2YzMtMmYwZmYzNTAwNTZjXkEyXkFqcGdeQXVyNzUxNzY1NjM@._V1_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  series -  comedy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Crazhead\",\n    \"description\": \"Black comedy about an unlikely duo of demon hunters.\",\n    \"main_cast\": \"Jane Doe\",\n    \"director\": \"Mike Thorgan\",\n    \"year\": \"2016\",\n    \"type\": \"series\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BOTgxODE5YjMtMjE2OC00YTU5LWFmNTgtZTc5ZjRkNGM4ZGJmXkEyXkFqcGdeQXVyNjQ0MDQxOTM@._V1_SY1000_CR0,0,666,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  movie -  drama",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"1917\",\n    \"description\": \"April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.\",\n    \"main_cast\": \"Dean-Charles Chapman\",\n    \"director\": \"Sam Mendes\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_SY1000_CR0,0,631,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  movie -  drama",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Parasite\",\n    \"description\": \"A corean family infiltrates in the house of a rich family and slowly gain control of each member\",\n    \"main_cast\": \"Song Go Han, Hi Sung Park\",\n    \"director\": \"Sam Mendes\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SY1000_CR0,0,674,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  movie -  drama",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Joker\",\n    \"description\": \"A delusional man becomes Gotham's most famous villain.\",\n    \"main_cast\": \"Joaquin Phoenix\",\n    \"director\": \"Todd Phillips\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,674,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  movie -  drama",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Extraction\",\n    \"description\": \"Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord.\",\n    \"main_cast\": \"Chris Hemsworth\",\n    \"director\": \"Sam Hargrave\",\n    \"year\": \"2020\",\n    \"type\": \"movie\",\n    \"genre\": \"drama, action\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMDJiNzUwYzEtNmQ2Yy00NWE4LWEwNzctM2M0MjE0OGUxZTA3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  movie -  comedy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Knives Out\",\n    \"description\": \"Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord.\",\n    \"main_cast\": \"Daniel Craig, Chris Evans, Ana de Armas \",\n    \"director\": \"Rian Johnson\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SY1000_SX675_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  movie -  comedy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"The Gentlemen\",\n    \"description\": \"An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.\",\n    \"main_cast\": \" Matthew McConaughey, Charlie Hunnam, Michelle Dockery.\",\n    \"director\": \"Guy Ritchie\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"comedy, action\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMTlkMmVmYjktYTc2NC00ZGZjLWEyOWUtMjc2MDMwMjQwOTA5XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_SY1000_SX675_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  movie -  comedy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Jojo Rabbit\",\n    \"description\": \"A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.\",\n    \"main_cast\": \"Daniel Craig, Chris Evans, Ana de Armas \",\n    \"director\": \"Taika Waititi\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"comedy\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SY1000_SX675_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-content -  movie -  comedy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"Once Upon a Time... in Hollywood\",\n    \"description\": \"A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.\",\n    \"main_cast\": \"Daniel Craig, Chris Evans, Ana de Armas \",\n    \"director\": \"Quentin Tarantino\",\n    \"year\": \"2019\",\n    \"type\": \"movie\",\n    \"genre\": \"comedy, drama\",\n    \"cover_url\": \"https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SY1000_CR0,0,674,1000_AL_.jpg\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/contents",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"contents"
-					]
-				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}
