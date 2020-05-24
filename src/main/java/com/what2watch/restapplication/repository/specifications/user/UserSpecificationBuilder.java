@@ -1,32 +1,33 @@
-package com.what2watch.restapplication.repository;
+package com.what2watch.restapplication.repository.specifications.user;
 
-import com.what2watch.restapplication.model.Content;
+import com.what2watch.restapplication.model.User;
+import com.what2watch.restapplication.repository.specifications.SearchCriteria;
 import org.springframework.data.jpa.domain.Specification;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ContentSpecificationBuilder {
+public class UserSpecificationBuilder {
 
     private final List<SearchCriteria> params;
 
-    public ContentSpecificationBuilder() {
+    public UserSpecificationBuilder() {
         params = new ArrayList<SearchCriteria>();
     }
 
-    public ContentSpecificationBuilder with(String key, String operation, Object value) {
+    public UserSpecificationBuilder with(String key, String operation, Object value) {
         params.add(new SearchCriteria(key, operation, value));
         return this;
     }
 
-    public Specification<Content> build() {
+    public Specification<User> build() {
         if (params.size() == 0) {
             return null;
         }
 
         List<Specification> specs = params.stream()
-                .map(ContentSpecification::new)
+                .map(UserSpecification::new)
                 .collect(Collectors.toList());
 
         Specification result = specs.get(0);

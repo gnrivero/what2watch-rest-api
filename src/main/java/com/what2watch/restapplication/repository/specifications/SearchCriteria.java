@@ -1,4 +1,4 @@
-package com.what2watch.restapplication.repository;
+package com.what2watch.restapplication.repository.specifications;
 
 public class SearchCriteria {
     private String key;

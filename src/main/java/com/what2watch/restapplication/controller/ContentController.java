@@ -1,16 +1,14 @@
 package com.what2watch.restapplication.controller;
 
 import com.what2watch.restapplication.model.Content;
-import com.what2watch.restapplication.repository.ContentSpecificationBuilder;
+import com.what2watch.restapplication.repository.specifications.content.ContentSpecificationBuilder;
 import com.what2watch.restapplication.service.ContentService;
-import org.apache.coyote.Response;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -36,10 +34,7 @@ public class ContentController {
         }
         Specification<Content> spec = builder.build();
 
-        return new ResponseEntity(
-                this.contentService.findAll(spec),
-                HttpStatus.OK
-        );
+        return new ResponseEntity(this.contentService.findAll(spec),HttpStatus.OK);
     }
 
     @PostMapping

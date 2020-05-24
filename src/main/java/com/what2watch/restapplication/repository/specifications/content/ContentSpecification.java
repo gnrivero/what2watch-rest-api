@@ -1,6 +1,7 @@
-package com.what2watch.restapplication.repository;
+package com.what2watch.restapplication.repository.specifications.content;
 
 import com.what2watch.restapplication.model.Content;
+import com.what2watch.restapplication.repository.specifications.SearchCriteria;
 import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.CriteriaBuilder;
