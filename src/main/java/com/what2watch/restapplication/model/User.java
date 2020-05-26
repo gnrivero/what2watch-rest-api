@@ -1,13 +1,11 @@
 package com.what2watch.restapplication.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 
-@Entity(name = "users")
+@Entity
+@Table(name = "users")
 public class User {
 
     @Id
@@ -15,8 +13,10 @@ public class User {
     private Integer id;
     private String name;
     private String surname;
+    @Column(unique = true)
     private String username;
     private String pass;
+    @Column(unique = true)
     private String email;
     private Date birthDate;
 
