@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/contents?search=type:series,genre:drama",
+							"raw": "http://localhost:8080/contents?search=type:series,genre:action",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -26,7 +26,7 @@
 							"query": [
 								{
 									"key": "search",
-									"value": "type:series,genre:drama"
+									"value": "type:series,genre:action"
 								}
 							]
 						}
@@ -533,7 +533,7 @@
 			"name": "user",
 			"item": [
 				{
-					"name": "create user",
+					"name": "create user - jperez89",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -546,6 +546,62 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"name\" : \"Juan\",\n\t\"surname\" : \"Perez\",\n\t\"username\" : \"jperez89\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"jperez@gmail.com\",\n\t\"birth_date\" : \"1989-06-01\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user - mlopez",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"María\",\n\t\"surname\" : \"Lopez\",\n\t\"username\" : \"mlopez\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"mlopez@gmail.com\",\n\t\"birth_date\" : \"1993-02-12\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user - tmayo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Tiberio\",\n\t\"surname\" : \"Mayo\",\n\t\"username\" : \"tmayo\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"tmayo@gmail.com\",\n\t\"birth_date\" : \"1993-02-12\"\n}"
 						},
 						"url": {
 							"raw": "localhost:8080/users",
@@ -603,6 +659,70 @@
 									"key": "search",
 									"value": "username:jperez89,pass:1234"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "create profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_id\" : 1,\n\t\"gender\" : \"Male\",\n\t\"metadata\" : [\n\t\t{\t\n\t\t\t\"preference_type\" : \"director\",\n\t\t\t\"value\" : \"Christopher Nolan\",\n\t\t\t\"priority\" : 1\n\t\t},\n\t\t{\n\t\t\t\"preference_type\" : \"director\",\n\t\t\t\"value\" : \"David Fincher\",\n\t\t\t\"priority\" : 2\n\t\t},\n\t\t{\n\t\t\t\"profile_id\" : 1,\n\t\t\t\"preference_type\" : \"genre\",\n\t\t\t\"value\" : \"Comedy\",\n\t\t\t\"priority\" : 1\n\t\t},\n\t\t{\n\t\t\t\"profile_id\" : 1,\n\t\t\t\"preference_type\" : \"genre\",\n\t\t\t\"value\" : \"Action\",\n\t\t\t\"priority\" : 2\n\t\t},\n\t\t{\n\t\t\t\"profile_id\" : 1,\n\t\t\t\"preference_type\" : \"genre\",\n\t\t\t\"value\" : \"Drama\",\n\t\t\t\"priority\" : 3\n\t\t},\n\t\t{\n\t\t\t\"profile_id\" : 1,\n\t\t\t\"preference_type\" : \"streaming\",\n\t\t\t\"value\" : \"Netflix\",\n\t\t\t\"priority\" : 1\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/profiles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create profile - mini",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_id\" : 1,\n\t\"gender\" : \"Male\",\n\t\"metadata\" : [\n\t\t{\n\t\t\t\"preference_type\" : \"director\",\n\t\t\t\"value\" : \"Christopher Nolan\",\n\t\t\t\"priority\" : 1\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/profiles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profiles"
 							]
 						}
 					},
