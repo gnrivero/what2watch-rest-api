@@ -12,13 +12,24 @@ public class Content {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
-    private String description;
-    private String mainCast;
-    private String director;
     private String year;
-    private String type;
+    private String runtime;
     private String genre;
-    private String coverURL;
+    private String director;
+    private String actors;
+    private String plot;
+    private String poster;
+    private String imdbRating;
+    private String imdbId;
+    private String type;
+    private String netflix;
+    private String amazon;
+    private Integer anger;
+    private Integer disgust;
+    private Integer sad;
+    private Integer happy;
+    private Integer surprise;
+    private Integer fear;
 
     public Long getId() {
         return id;
@@ -36,30 +47,6 @@ public class Content {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getMainCast() {
-        return mainCast;
-    }
-
-    public void setMainCast(String mainCast) {
-        this.mainCast = mainCast;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
     public String getYear() {
         return year;
     }
@@ -68,12 +55,12 @@ public class Content {
         this.year = year;
     }
 
-    public String getType() {
-        return type;
+    public String getRuntime() {
+        return runtime;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setRuntime(String runtime) {
+        this.runtime = runtime;
     }
 
     public String getGenre() {
@@ -84,12 +71,123 @@ public class Content {
         this.genre = genre;
     }
 
-    public String getCoverURL() {
-        return coverURL;
+    public String getDirector() {
+        return director;
     }
 
-    public void setCoverURL(String coverURL) {
-        this.coverURL = coverURL;
+    public void setDirector(String director) {
+        this.director = director;
     }
 
+    public String getActors() {
+        return actors;
+    }
+
+    public void setActors(String actors) {
+        this.actors = actors;
+    }
+
+    public String getPlot() {
+        return plot;
+    }
+
+    public void setPlot(String plot) {
+        this.plot = plot;
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
+
+    public String getImdbRating() {
+        return imdbRating;
+    }
+
+    public void setImdbRating(String imdbRating) {
+        this.imdbRating = imdbRating;
+    }
+
+    public String getImdbId() {
+        return imdbId;
+    }
+
+    public void setImdbId(String imdbId) {
+        this.imdbId = imdbId;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getNetflix() {
+        return netflix;
+    }
+
+    public void setNetflix(String netflix) {
+        this.netflix = netflix;
+    }
+
+    public String getAmazon() {
+        return amazon;
+    }
+
+    public void setAmazon(String amazon) {
+        this.amazon = amazon;
+    }
+
+    public Integer getAnger() {
+        return anger;
+    }
+
+    public void setAnger(Integer anger) {
+        this.anger = anger;
+    }
+
+    public Integer getDisgust() {
+        return disgust;
+    }
+
+    public void setDisgust(Integer disgust) {
+        this.disgust = disgust;
+    }
+
+    public Integer getSad() {
+        return sad;
+    }
+
+    public void setSad(Integer sad) {
+        this.sad = sad;
+    }
+
+    public Integer getHappy() {
+        return happy;
+    }
+
+    public void setHappy(Integer happy) {
+        this.happy = happy;
+    }
+
+    public Integer getSurprise() {
+        return surprise;
+    }
+
+    public void setSurprise(Integer surprise) {
+        this.surprise = surprise;
+    }
+
+    public Integer getFear() {
+        return fear;
+    }
+
+    public void setFear(Integer fear) {
+        this.fear = fear;
+    }
 }

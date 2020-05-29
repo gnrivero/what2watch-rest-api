@@ -1,16 +1,30 @@
 /* Este script es para crear una base pelada sin datos */
 DROP DATABASE IF EXISTS whattowatchdb;
+
 CREATE DATABASE whattowatchdb;
+
+USE whattowatchdb;
 
 -- whattowatchdb.content definition
 
 CREATE TABLE `content` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `coverurl` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
+  `actors` varchar(255) DEFAULT NULL,
+  `amazon` varchar(255) DEFAULT NULL,
+  `anger` int DEFAULT NULL,
   `director` varchar(255) DEFAULT NULL,
+  `disgust` int DEFAULT NULL,
+  `fear` int DEFAULT NULL,
   `genre` varchar(255) DEFAULT NULL,
-  `main_cast` varchar(255) DEFAULT NULL,
+  `happy` int DEFAULT NULL,
+  `imdb_id` varchar(255) DEFAULT NULL,
+  `imdb_rating` varchar(255) DEFAULT NULL,
+  `netflix` varchar(255) DEFAULT NULL,
+  `plot` varchar(255) DEFAULT NULL,
+  `poster` varchar(255) DEFAULT NULL,
+  `runtime` varchar(255) DEFAULT NULL,
+  `sad` int DEFAULT NULL,
+  `surprise` int DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
   `year` varchar(255) DEFAULT NULL,
