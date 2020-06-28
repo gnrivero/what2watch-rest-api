@@ -51,6 +51,7 @@ GET http://localhost:8080/users?search=username:jperez89,pass:123456
 <h3>Lo nuevo </h3>
 
 <b>IMPORTANTE!!!</b>: Para probar esto volver a correr el script de base de datos "w2w-createdb-gonza.sql"
+<b>IMPORTANTE!!!</b>: Agregué la config "serverTimezone=GMT-3" al properties de la base. Si les falla agregar el valor "GMT-3" en el campo "Server Time Zone" de DBeaver.  
 
 <b>Agregar amigos</b>
 
