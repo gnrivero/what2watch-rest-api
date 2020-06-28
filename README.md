@@ -51,5 +51,19 @@ GET http://localhost:8080/users?search?username=jperez89,pass=123456
 
 <b>Para probar crear un usuario:</b> Usar el modelo de pegada que dejé en "postman/what2watch.postman_collection.json" y luego dentro de la carpeta (de postman) "user" están los posts con su json para crear el usuario.
 
+<b>Registrar Comentario</b>
+
+POST http://localhost:8080/comment<br>
+GET http://localhost:8080/comment?search=content_id=1
+
+<b>Para probar crear un commentario (POST):</b> Utilizar la siguiente estructura de body: 
+{
+  "content_id": "1",
+  "details": "asdda",
+  "user_id": "1"
+}
+
+
+
 
 
