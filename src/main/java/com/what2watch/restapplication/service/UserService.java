@@ -1,7 +1,6 @@
 package com.what2watch.restapplication.service;
 
 
-import com.what2watch.restapplication.model.Content;
 import com.what2watch.restapplication.model.User;
 import com.what2watch.restapplication.repository.UserRepository;
 import org.springframework.data.jpa.domain.Specification;

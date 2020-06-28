@@ -1,12 +1,9 @@
 package com.what2watch.restapplication.controller;
 
 
-import com.what2watch.restapplication.model.Content;
 import com.what2watch.restapplication.model.User;
-import com.what2watch.restapplication.repository.specifications.content.ContentSpecificationBuilder;
 import com.what2watch.restapplication.repository.specifications.user.UserSpecificationBuilder;
 import com.what2watch.restapplication.service.UserService;
-import org.apache.coyote.Response;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

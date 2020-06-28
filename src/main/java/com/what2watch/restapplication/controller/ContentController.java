@@ -133,7 +133,7 @@ public class ContentController {
     }
 
     private String[] findEmotionId(String search) {
-        String [] stringArray = search.substring(search.indexOf("emoid=")).split(";|=");
+        String [] stringArray = search.substring(search.indexOf("emoid:")).split(";|:");
         return Arrays.copyOfRange(stringArray, 1, stringArray.length);
     }
 
