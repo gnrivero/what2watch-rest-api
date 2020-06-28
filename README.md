@@ -67,12 +67,12 @@ Reponse: toda la lista de amigos actual del usuario logueado (Users)
 
 <b>Obtener lista de amigos</b>
 
-GET localhost:8080/users/{userId}/friends<br>
+GET http://localhost:8080/users/{userId}/friends<br>
 
 Response: lista de amigos del usuario {userId}, son objetos User.
 
 <b>Obtener sugerencias de amigos</b>
 
-GET localhost:8080/users/{userId}/friend-suggestions<br>
+GET http://localhost:8080/users/{userId}/friend-suggestions<br>
 
 Response: lista de sugerencia amigos del usuario {userId}, son objetos User.
