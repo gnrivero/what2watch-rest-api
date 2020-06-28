@@ -45,7 +45,9 @@ Doc: https://www.baeldung.com/rest-api-search-language-spring-data-specification
 <h3>Lo nuevo </h3>
 
 <b>Registrar Usuario</b>
-
+Nota:
+  Previamente correr el script what2watch-rest-api/SQL/Scripts/max/comment.sql para crear la tabla de comentarios
+  
 POST http://localhost:8080/users<br>
 GET http://localhost:8080/users?search?username=jperez89,pass=123456
 
