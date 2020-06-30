@@ -4,30 +4,30 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "Comment")
+@Table(name = "comment")
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private Integer content_id;
+    private Long id;
+    private Long content_id;
     private String details;
-    private Integer user_id;
+    private Long user_id;
 
     private Date  timeStamp;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getContentId() {
+    public Long getContentId() {
         return content_id;
     }
 
-    public void setContent_id(Integer content_id) {
+    public void setContent_id(Long content_id) {
         this.content_id = content_id;
     }
 
@@ -37,7 +37,7 @@ public class Comment {
     
     public void setDetails() { this.details = details; }
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return user_id;
     }
 
