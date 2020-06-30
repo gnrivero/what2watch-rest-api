@@ -28,10 +28,14 @@ public class CommentController {
 
     @PostMapping
     public ResponseEntity<Comment> createComment(@RequestBody Comment comment){
-        setTimeStamp(comment);
+        setCommentFormat(comment);
         Comment createdComment = this.service.createComment(comment);
 
         return new ResponseEntity<Comment>(createdComment, HttpStatus.CREATED);
+    }
+
+    private void setCommentFormat(Comment comment) {
+        setTimeStamp(comment);
     }
 
     private void setTimeStamp(Comment comment) {
@@ -39,6 +43,7 @@ public class CommentController {
         Timestamp ts = new Timestamp(date.getTime());
         comment.setTimeStamp(ts);
     }
+
 
 
     @GetMapping
