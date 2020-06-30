@@ -56,6 +56,18 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_6dotkott2kjsp8vw4d0m25fb7` (`email`),
   UNIQUE KEY `UK_r43af9ap4edm43mmtq01oddj6` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- whattowatchdb.friendship definition
+
+CREATE TABLE `friendship` (
+  `user_id` int NOT NULL,
+  `friend_id` int NOT NULL,
+  KEY `FK3xu72n4ht9qij4qc7wdpb2whd` (`friend_id`),
+  KEY `FKgc658l9wcttfpk0c1d3englh9` (`user_id`),
+  CONSTRAINT `FK3xu72n4ht9qij4qc7wdpb2whd` FOREIGN KEY (`friend_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `FKgc658l9wcttfpk0c1d3englh9` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 

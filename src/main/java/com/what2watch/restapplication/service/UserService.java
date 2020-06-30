@@ -1,6 +1,5 @@
 package com.what2watch.restapplication.service;
 
-
 import com.what2watch.restapplication.model.User;
 import com.what2watch.restapplication.repository.UserRepository;
 import org.springframework.data.jpa.domain.Specification;
@@ -23,6 +22,18 @@ public class UserService {
 
     public List<User> findAll(Specification<User> spec){
         return repository.findAll(spec);
+    }
+
+    public User findById(Integer userId){
+        return repository.findById(userId).orElse(null);
+    }
+
+    public User save(User user){
+        return repository.save(user);
+    }
+
+    public List<User> getFriendSuggestions(Integer userId){
+        return repository.findFriendsSuggestion(userId);
     }
 
 }

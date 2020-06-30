@@ -1,7 +1,11 @@
 package com.what2watch.restapplication.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -19,6 +23,14 @@ public class User {
     @Column(unique = true)
     private String email;
     private Date birthDate;
+
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+    @JoinTable(
+            name = "friendship",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "friend_id"))
+    private Set<User> friends;
 
     public Integer getId() {
         return id;
@@ -76,4 +88,11 @@ public class User {
         this.birthDate = birthDate;
     }
 
+    public Set<User> getFriends() {
+        return friends;
+    }
+
+    public void setFriends(Set<User> friends) {
+        this.friends = friends;
+    }
 }

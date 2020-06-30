@@ -46,7 +46,6 @@ public class ContentController {
     }
 
     private String replaceEmotionData(String search) throws IOException, ParseException {
-        //type:serie,anger:2,disgust:1,sad:1,happy:10
         String[] emoIds = findEmotionId(search);
         JSONArray emoData = getJsonArrayEmotionalData();
         ArrayList<JSONArray> matchList = addListMatches(emoIds, emoData);
@@ -57,9 +56,23 @@ public class ContentController {
     }
 
     private String formatString(String emotionText) {
+        String resultText="";
         emotionText = emotionText.replaceAll("[{}]", "");
         emotionText = emotionText.replaceAll("\"", "");
-        return emotionText;
+        String[] splitter = emotionText.split(",");
+        for (int i=0; i < splitter.length; i++){
+            String[] text = splitter[i].split(":");
+            resultText = resultText + text[0];
+            resultText = resultText + ">";
+            resultText = resultText + text[1];
+            resultText = resultText + ",";
+            resultText = resultText + text[0];
+            resultText = resultText + "<";
+            int uppLimit = Integer.parseInt(text[1]) + 2;
+            resultText = resultText + uppLimit;
+            resultText = resultText + ",";
+        }
+        return resultText.substring(0, resultText.length() - 1);
     }
 
     private JSONObject removeEmptyValues(JSONObject jsonObject) {

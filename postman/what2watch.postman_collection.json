@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "190feec9-ad67-49bd-96af-f48d0cc17af2",
+		"_postman_id": "890523a4-3a00-40dd-9d06-2ad78ee9bba0",
 		"name": "what2watch",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -533,136 +533,418 @@
 			"name": "user",
 			"item": [
 				{
-					"name": "create user - jperez89",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"Juan\",\n\t\"surname\" : \"Perez\",\n\t\"username\" : \"jperez89\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"jperez@gmail.com\",\n\t\"birth_date\" : \"1989-06-01\"\n}"
-						},
-						"url": {
-							"raw": "localhost:8080/users",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "create user - mlopez",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"María\",\n\t\"surname\" : \"Lopez\",\n\t\"username\" : \"mlopez\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"mlopez@gmail.com\",\n\t\"birth_date\" : \"1993-02-12\"\n}"
-						},
-						"url": {
-							"raw": "localhost:8080/users",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "create user - tmayo",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"Tiberio\",\n\t\"surname\" : \"Mayo\",\n\t\"username\" : \"tmayo\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"tmayo@gmail.com\",\n\t\"birth_date\" : \"1993-02-12\"\n}"
-						},
-						"url": {
-							"raw": "localhost:8080/users",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "search user by username and password",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080/users?search=username:jperez89,pass:123456",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"users"
-							],
-							"query": [
-								{
-									"key": "search",
-									"value": "username:jperez89,pass:123456"
+					"name": "create User",
+					"item": [
+						{
+							"name": "create user - jperez89",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Juan\",\n\t\"surname\" : \"Perez\",\n\t\"username\" : \"jperez89\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"jperez@gmail.com\",\n\t\"birth_date\" : \"1989-06-01\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
 								}
-							]
+							},
+							"response": []
+						},
+						{
+							"name": "create user - tmayo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Tiberio\",\n\t\"surname\" : \"Mayo\",\n\t\"username\" : \"tmayo\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"tmayo@gmail.com\",\n\t\"birth_date\" : \"1993-02-12\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create user - mlopez",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"María\",\n\t\"surname\" : \"Lopez\",\n\t\"username\" : \"mlopez\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"mlopez@gmail.com\",\n\t\"birth_date\" : \"1993-02-12\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create user - #4",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Jose\",\n\t\"surname\" : \"Lopez\",\n\t\"username\" : \"jlopez\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"jlopez@gmail.com\",\n\t\"birth_date\" : \"1993-02-12\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create user - #5",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Armando\",\n\t\"surname\" : \"Weibull\",\n\t\"username\" : \"aweibull\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"weibull@gmail.com\",\n\t\"birth_date\" : \"1968-02-12\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create user - #8",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Miguel\",\n\t\"surname\" : \"Gandolo\",\n\t\"username\" : \"mgandolfo\",\n\t\"pass\" : \"123456\",\n\t\"email\" : \"mgandolfo@gmail.com\",\n\t\"birth_date\" : \"1968-02-12\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				},
 				{
-					"name": "search user - non-existent",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080/users?search=username:jperez89,pass:1234",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"users"
-							],
-							"query": [
-								{
-									"key": "search",
-									"value": "username:jperez89,pass:1234"
+					"name": "get User",
+					"item": [
+						{
+							"name": "search user by username and password",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users?search=username:jperez89,pass:123456",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "username:jperez89,pass:123456"
+										}
+									]
 								}
-							]
+							},
+							"response": []
+						},
+						{
+							"name": "search user - non-existent",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users?search=username:jperez89,pass:1234",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "username:jperez89,pass:1234"
+										}
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "friends",
+					"item": [
+						{
+							"name": "addFriend 1 to 4",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\" : 4\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users/1/friends",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1",
+										"friends"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addFriend 1 to 7",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\" : 7\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users/1/friends",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1",
+										"friends"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addFriend 1 to 8",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\" : 8\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users/1/friends",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1",
+										"friends"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get User #1 Friends",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/1/friends",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1",
+										"friends"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get User #7 Friends",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/7/friends",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"7",
+										"friends"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get User #4 Friends Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/4/friends",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"4",
+										"friends"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "friend-suggestion",
+					"item": [
+						{
+							"name": "get User #1 Friends Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/1/friend-suggestions",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1",
+										"friend-suggestions"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				}
 			],
 			"protocolProfileBehavior": {}

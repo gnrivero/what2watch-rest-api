@@ -13,7 +13,8 @@
                 "sad":"0",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"happy>1,happy<6"
        },
        {
           "id":"2",
@@ -28,7 +29,8 @@
                 "sad":"0",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"happy>4,happy<7"
        },
        {
           "id":"3",
@@ -43,7 +45,8 @@
                 "sad":"7",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"sad>6,sad<10"
        },
        {
           "id":"4",
@@ -58,7 +61,8 @@
                 "sad":"0",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"happy>3,happy<5,anger>0,anger<3"
        },
        {
           "id":"5",
@@ -73,7 +77,8 @@
                 "sad":"7",
                 "surprise":"7"
              }
-          ]
+          ],
+          "query":"sad>4,sad<7,surprise>6,surprise<10"
        },
        {
           "id":"6",
@@ -88,7 +93,8 @@
                 "sad":"0",
                 "surprise":"4"
              }
-          ]
+          ],
+          "query":"surprise>4,happy<7"
        },
        {
           "id":"7",
@@ -96,14 +102,15 @@
           "offSet":"2",
           "emotionsDetails":[
              {
-                "anger":"",
+                "anger":"0",
                 "disgust":"4",
                 "fear":"0",
                 "happy":"0",
                 "sad":"0",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"disgust>3,disgust<7"
        },
        {
           "id":"8",
@@ -118,7 +125,8 @@
                 "sad":"0",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"anger>6,anger<10"
        },
        {
           "id":"9",
@@ -148,7 +156,8 @@
                 "sad":"4",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"anger>0,anger<3,disgust>1,disgust<4,sad>3,sad<7"
        },
        {
           "id":"11",
@@ -163,7 +172,8 @@
                 "sad":"4",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"sad>3,sad<5"
        },
        {
           "id":"12",
@@ -178,7 +188,8 @@
                 "sad":"0",
                 "surprise":"0"
              }
-          ]
+          ],
+          "query":"fear>3,fear<6"
        }
     ]
  }
