@@ -10,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -26,10 +28,16 @@ public class CommentController {
 
     @PostMapping
     public ResponseEntity<Comment> createComment(@RequestBody Comment comment){
-
+        setTimeStampt(comment);
         Comment createdComment = this.service.createComment(comment);
 
         return new ResponseEntity<Comment>(createdComment, HttpStatus.CREATED);
+    }
+
+    private void setTimeStampt(Comment comment) {
+        Date date = new Date();
+        Timestamp ts=new Timestamp(date.getTime());
+        comment.setTimeStamp(ts);
     }
 
 
