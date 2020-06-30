@@ -1,4 +1,5 @@
 /* Crear tabla de comentarios sin datos */
+USE whattowatchdb;
 DROP TABLE IF EXISTS `comments`;
 CREATE TABLE `comments` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
@@ -8,4 +9,4 @@ CREATE TABLE `comments` (
   `timeStamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+)
